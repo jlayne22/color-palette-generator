@@ -48,7 +48,7 @@ export function ColorCard({
       }
       await navigator.clipboard.writeText(value);
       setCopied(key);
-      window.setTimeout(() => setCopied((current) => (current === key ? null : current)), 1600);
+      window.setTimeout(() => setCopied((current) => (current === key ? null : current)), 2200);
     } catch {
       setCopied("unavailable");
     }
@@ -164,7 +164,12 @@ export function ColorCard({
           />
         </div>
         {copyMessage ? (
-          <p className="text-sm text-slate-600" aria-live="polite">
+          <p
+            className={`text-sm font-semibold ${
+              copied === "unavailable" ? "text-rose-600" : "text-emerald-700"
+            }`}
+            aria-live="polite"
+          >
             {copyMessage}
           </p>
         ) : null}
@@ -212,7 +217,11 @@ function CopyChip({
     <button
       type="button"
       onClick={onClick}
-      className="inline-flex h-11 min-w-[4.5rem] items-center justify-center rounded-xl border border-slate-200 bg-white px-3 text-sm font-medium text-slate-700 transition hover:border-slate-300 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+      className={`inline-flex h-11 min-w-[4.5rem] items-center justify-center rounded-xl border px-3 text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 ${
+        copied
+          ? "border-emerald-300 bg-emerald-50 text-emerald-800"
+          : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50"
+      }`}
     >
       {copied ? "Copied!" : `Copy ${label}`}
     </button>

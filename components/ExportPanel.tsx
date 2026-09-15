@@ -111,7 +111,12 @@ export function ExportPanel({ colors }: ExportPanelProps) {
           <code>{snippets[active]}</code>
         </pre>
         {message ? (
-          <p className="mt-3 text-sm text-slate-600" aria-live="polite">
+          <p
+            className={`mt-3 text-sm font-semibold ${
+              message === "Copied!" ? "text-emerald-700" : "text-slate-600"
+            }`}
+            aria-live="polite"
+          >
             {message}
           </p>
         ) : null}
