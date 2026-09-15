@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Color Palette Generator">
+  <rect width="32" height="32" rx="8" fill="#F8FAFC"/>
+  <rect x="4" y="7" width="4.8" height="18" rx="1.2" fill="#264653"/>
+  <rect x="9.2" y="7" width="4.8" height="18" rx="1.2" fill="#2A9D8F"/>
+  <rect x="14.4" y="7" width="4.8" height="18" rx="1.2" fill="#E9C46A"/>
+  <rect x="19.6" y="7" width="4.8" height="18" rx="1.2" fill="#F4A261"/>
+  <rect x="24.8" y="7" width="4.8" height="18" rx="1.2" fill="#E76F51"/>
+</svg>
